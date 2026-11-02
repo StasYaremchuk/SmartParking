@@ -6,6 +6,6 @@
 ## Демонстрація роботи
 
 ![Web Interface](images/web-interface.png)
-![Hardware Setup](images/hardware1.jpg)
-![Hardware Setup](images/hardware2.jpg)
-![Hardware Setup](images/hardware3.jpg)
+![Hardware Setup](images/hardware1.png)
+![Hardware Setup](images/hardware2.png)
+![Hardware Setup](images/hardware3.png)
