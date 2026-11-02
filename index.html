@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartParking | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">Smart<span>Parking</span></div>
+            <div class="live-indicator">LIVE</div>
+        </header>
+
+        <section class="weather-row">
+            <div class="weather-card">
+                <span class="label">Температура</span>
+                <span class="value"><span id="temp-val">--</span>°C</span>
+            </div>
+            <div class="weather-card">
+                <span class="label">Вологість</span>
+                <span class="value"><span id="hum-val">--</span>%</span>
+            </div>
+        </section>
+
+        <section class="overview">
+            <div class="stat-block">
+                <span id="free-count">0</span>
+                <label>Вільних місць</label>
+            </div>
+        </section>
+
+        <div class="parking-grid">
+            <div id="slot-1" class="parking-card">
+                <div class="card-header">
+                    <span class="id">A-01</span>
+                    <span id="badge-1" class="badge">Статус</span>
+                </div>
+                <div class="visual">
+                    <div class="car-shadow"></div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="car" class="car-img">
+                </div>
+                <button class="main-btn" onclick="toggleReservation(1)" id="btn-1">Забронювати</button>
+            </div>
+
+            <div id="slot-2" class="parking-card">
+                <div class="card-header">
+                    <span class="id">A-02</span>
+                    <span id="badge-2" class="badge">Статус</span>
+                </div>
+                <div class="visual">
+                    <div class="car-shadow"></div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="car" class="car-img">
+                </div>
+                <button class="main-btn" onclick="toggleReservation(2)" id="btn-2">Забронювати</button>
+            </div>
+        </div>
+
+        <section class="stats-section">
+            <div class="stats-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h3>Історія стану (щогодини)</h3>
+                <button class="clear-btn" onclick="clearHistory()" style="background: #fee2e2; color: #ef4444; border: none; padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                    Очистити журнал
+                </button>
+            </div>
+            <div class="table-wrapper">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Час</th>
+                            <th>Вільні місця</th>
+                            <th>Темп.</th>
+                            <th>Вол.</th>
+                            <th></th> </tr>
+                        </tr>
+                    </thead>
+                    <tbody id="stats-body">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
